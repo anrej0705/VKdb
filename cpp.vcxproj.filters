@@ -118,9 +118,6 @@
     <None Include="FR_fr.loc">
       <Filter>Локали</Filter>
     </None>
-    <None Include="RU_ru.loc">
-      <Filter>Локали</Filter>
-    </None>
     <None Include="UA_uk.loc">
       <Filter>Локали</Filter>
     </None>
@@ -128,6 +125,9 @@
       <Filter>Локали</Filter>
     </None>
     <None Include="Locales\locales.ini">
+      <Filter>Локали</Filter>
+    </None>
+    <None Include="Locales\RU_ru.loc">
       <Filter>Локали</Filter>
     </None>
   </ItemGroup>
