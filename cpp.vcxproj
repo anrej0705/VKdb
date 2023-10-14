@@ -87,13 +87,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bridge.h" />
+    <ClInclude Include="baselocale.h" />
     <ClInclude Include="cpp.h" />
     <ClInclude Include="dbrecord.h" />
     <ClInclude Include="dtime.h" />
     <ClInclude Include="flags.h" />
-    <ClInclude Include="gui.h" />
-    <ClInclude Include="menu.h" />
+    <ClInclude Include="gui_api\bridge.h" />
+    <ClInclude Include="gui_api\gui.h" />
+    <ClInclude Include="gui_api\menu.h" />
     <ClInclude Include="rem.h" />
     <ClInclude Include="rulbits.h" />
     <ClInclude Include="stdafx.h" />
@@ -102,25 +103,25 @@
     <ClInclude Include="vkmeta.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bridge.cpp" />
+    <ClCompile Include="core\dbrecord.cpp" />
+    <ClCompile Include="core\dtime.cpp" />
+    <ClCompile Include="core\flags.cpp" />
+    <ClCompile Include="core\rem.cpp" />
+    <ClCompile Include="core\rulbits.cpp" />
+    <ClCompile Include="core\vkmeta.cpp" />
     <ClCompile Include="cpp.cpp" />
-    <ClCompile Include="dbrecord.cpp" />
-    <ClCompile Include="dtime.cpp" />
-    <ClCompile Include="flags.cpp" />
-    <ClCompile Include="gui.cpp" />
-    <ClCompile Include="menu.cpp" />
-    <ClCompile Include="msoftcon.cpp" />
-    <ClCompile Include="rem.cpp" />
-    <ClCompile Include="rulbits.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="tickCounter.cpp" />
-    <ClCompile Include="vkmeta.cpp" />
+    <ClCompile Include="gui_api\bridge.cpp" />
+    <ClCompile Include="gui_api\gui.cpp" />
+    <ClCompile Include="gui_api\menu.cpp" />
+    <ClCompile Include="utils\msoftcon.cpp" />
+    <ClCompile Include="utils\tickCounter.cpp" />
+    <ClCompile Include="utils\VERYLONG.CPP" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DE_gr.loc" />
     <None Include="EN_us.loc" />
     <None Include="FR_fr.loc" />
-    <None Include="locales.ini" />
+    <None Include="Locales\locales.ini" />
     <None Include="RU_ru.loc" />
     <None Include="UA_uk.loc" />
   </ItemGroup>

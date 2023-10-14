@@ -1923,6 +1923,8 @@ void set_pos(COORD coord)
 }
 void setupWindow()
 {
+	DWORD prev_mode;
+	PCONSOLE_FONT_INFOEX lpCCF = new CONSOLE_FONT_INFOEX();
 	string cmdHeader = cpTranslate("[¬ –¿«–¿¡Œ“ ≈][CMD 1320x680] DB Manager by Anrej0705[github.com/anrej0705] v0.5[Œ∆»ƒ¿Õ»≈]", 1251);
 	LPSTR proc = const_cast<char*>(cmdHeader.c_str());
 	hwnd = GetConsoleWindow();
@@ -1931,6 +1933,17 @@ void setupWindow()
 	//setlocale(LC_ALL, "Russian");
 	//cout << "CP=" << GetConsoleOutputCP() << endl;
 	//cout << "CP=" << GetConsoleCP() << endl;
+	lpCCF->cbSize = sizeof(_CONSOLE_FONT_INFOEX);
+	GetCurrentConsoleFontEx(hCon, 0, lpCCF);
+	GetConsoleMode(hInput, &prev_mode);
+	lpCCF->dwFontSize.X = 8;
+	lpCCF->dwFontSize.Y = 12;
+	lpCCF->FontFamily = FF_DONTCARE;
+	lpCCF->FontWeight = FW_NORMAL;
+	wcscpy(lpCCF->FaceName, L"Terminal");
+	SetConsoleMode(hInput, ENABLE_EXTENDED_FLAGS |
+		(prev_mode & ~ENABLE_QUICK_EDIT_MODE));
+	SetCurrentConsoleFontEx(hCon, 0, lpCCF);
 	SetConsoleCP(866);
 	SetConsoleOutputCP(866);
 	//cout << "CP=" << GetConsoleOutputCP() << endl;

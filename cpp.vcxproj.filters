@@ -19,6 +19,9 @@
     <Filter Include="Файлы исходного кода\Парсер текстовых таблиц">
       <UniqueIdentifier>{73fe9df0-b5b4-4dc7-963f-11c6ccfddbc0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Графическое API">
+      <UniqueIdentifier>{6a1522f4-fbc8-40a8-a8c1-19b7ed3684cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -32,15 +35,6 @@
     </ClInclude>
     <ClInclude Include="tickCounter.h">
       <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="gui.h">
-      <Filter>Файлы исходного кода</Filter>
-    </ClInclude>
-    <ClInclude Include="bridge.h">
-      <Filter>Файлы исходного кода</Filter>
-    </ClInclude>
-    <ClInclude Include="menu.h">
-      <Filter>Файлы исходного кода</Filter>
     </ClInclude>
     <ClInclude Include="cpp.h">
       <Filter>Файлы исходного кода</Filter>
@@ -63,46 +57,58 @@
     <ClInclude Include="flags.h">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClInclude>
+    <ClInclude Include="baselocale.h">
+      <Filter>Локали</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_api\bridge.h">
+      <Filter>Графическое API</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_api\gui.h">
+      <Filter>Графическое API</Filter>
+    </ClInclude>
+    <ClInclude Include="gui_api\menu.h">
+      <Filter>Графическое API</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="cpp.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="msoftcon.cpp">
+    <ClCompile Include="utils\msoftcon.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="tickCounter.cpp">
+    <ClCompile Include="utils\tickCounter.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="gui.cpp">
+    <ClCompile Include="utils\VERYLONG.CPP">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="bridge.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="gui_api\bridge.cpp">
+      <Filter>Графическое API</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>Файлы исходного кода</Filter>
+    <ClCompile Include="gui_api\menu.cpp">
+      <Filter>Графическое API</Filter>
     </ClCompile>
-    <ClCompile Include="dbrecord.cpp">
+    <ClCompile Include="core\dbrecord.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClCompile>
-    <ClCompile Include="rulbits.cpp">
+    <ClCompile Include="core\dtime.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClCompile>
-    <ClCompile Include="vkmeta.cpp">
+    <ClCompile Include="core\flags.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClCompile>
-    <ClCompile Include="dtime.cpp">
+    <ClCompile Include="core\rem.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClCompile>
-    <ClCompile Include="rem.cpp">
+    <ClCompile Include="core\rulbits.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
     </ClCompile>
-    <ClCompile Include="flags.cpp">
+    <ClCompile Include="core\vkmeta.cpp">
       <Filter>Файлы исходного кода\Ядро бд</Filter>
+    </ClCompile>
+    <ClCompile Include="gui_api\gui.cpp">
+      <Filter>Графическое API</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,10 +124,10 @@
     <None Include="UA_uk.loc">
       <Filter>Локали</Filter>
     </None>
-    <None Include="locales.ini">
+    <None Include="DE_gr.loc">
       <Filter>Локали</Filter>
     </None>
-    <None Include="DE_gr.loc">
+    <None Include="Locales\locales.ini">
       <Filter>Локали</Filter>
     </None>
   </ItemGroup>

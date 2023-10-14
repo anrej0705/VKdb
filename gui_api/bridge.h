@@ -13,6 +13,7 @@
 #include "windows.h"
 #include "gui.h"
 #include "stdint.h"
+#include "baselocale.h"
 #include <string>
 #include <iostream>
 #include <sstream>

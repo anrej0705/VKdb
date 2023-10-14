@@ -119,13 +119,16 @@ void getLocaleList()
 	stringstream coutLog;
 
 	//Открываем файл с информацией о локалях
-	locConfig.open("locales.ini");
+	locConfig.open("Locales\\locales.ini");
 
 	//Если файл отсутствует то сообщаем об этом
 	//И сообщаем о языке по умолчанию
 	if (!locConfig.is_open())
 	{
-		cout << cpTranslate("Не найден список локалей locales.ini. Установлена локаль по умолчанию: Русский", 1251) << endl;
+		cout << cpTranslate("Не найден список локалей locales.ini. Остановка", 1251) << endl;
+		_getch();
+		exit(1);
+		//cout << cpTranslate("Не найден список локалей locales.ini. Установлена локаль по умолчанию: Русский", 1251) << endl;
 	}
 	else
 	{
@@ -154,7 +157,7 @@ void getLocaleList()
 	localesCnt = 0;
 
 	//Открываем снова
-	locConfig.open("locales.ini");
+	locConfig.open("Locales\\locales.ini");
 
 	//Читаем в массив
 	while (getline(locConfig, readLine))
